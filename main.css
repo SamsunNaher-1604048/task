@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+.app {
+  padding: 20px;
+  background-color: darkblue;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.side {
+  display: flex;
+  text-align: center;
+}
+.manu-item {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+   margin-right: 15px; 
+}
+
+.welcome {
+  font-size: 30px;
+  color: white;
+}
+.barger {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 3vh;
+  cursor: pointer;
+}
+.line1 {
+  height: 2px;
+  width: 45px;
+  background-color: black;
+  margin-bottom: 10px;
+}
+@media (min-device-width: 480px) {
+  .barger {
+    display: none;
+  }
+}
+@media (max-device-width: 480px) {
+  .app {
+    background-color: white;
+  }
+  .welcome {
+    color: black;
+    width: 100%;
+    padding: 50px;
+  }
+  .manu-item {
+    margin-bottom: 50px;
+    font-size: 30px;
+  }
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .side {
+    width: 500px;
+    height: 100vh;
+    background-color: darkblue;
+    text-align: start;
+    padding: 50px;
+    transform: translateX(100%);
+  }
+  .sideactive {
+    display: flex;
+    transform: translateX(0px);
+    transition: transform 0.5s;
+  }
+  .welcomeactive {
+    filter: blur(5px);
+    width: 100%;
+  }
+  .bargeractive {
+    display: none;
+  }
+}
